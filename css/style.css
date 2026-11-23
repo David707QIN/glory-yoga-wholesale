@@ -155,6 +155,15 @@ img { max-width: 100%; display: block; }
 .logo-light { color: #fff; }
 .logo-light span { color: var(--brand); }
 
+.social-links { display: flex; gap: 0.8rem; }
+.social-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  color: #fff; background: rgba(255,255,255,0.1);
+  transition: background .2s, transform .15s;
+}
+.social-links a:hover { background: var(--brand); transform: translateY(-2px); }
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
