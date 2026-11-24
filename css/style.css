@@ -172,8 +172,8 @@ img { max-width: 100%; display: block; }
 
 /* ===== 色卡展示区 ===== */
 .color-range-block { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3rem; align-items: center; margin-top: 1rem; }
-.color-range-img { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; }
-.color-range-img img { width: 100%; display: block; }
+.color-range-img { background: var(--bg-alt); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; padding: 0.75rem; }
+.color-range-img img { width: 100%; display: block; border-radius: 10px; }
 .color-range-note h3 { font-size: 1.6rem; margin-bottom: 1rem; }
 .color-range-note p { color: var(--ink-soft); margin-bottom: 1rem; }
 .color-range-note .muted { font-size: 0.9rem; color: var(--brand-dark); }
@@ -182,10 +182,10 @@ img { max-width: 100%; display: block; }
 /* ===== 竖版色卡图（纯色页） ===== */
 .chart-block { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: center; margin-top: 1rem; }
 .chart-block .chart-img {
-  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
-  border: 1px solid var(--line); overflow: hidden; display: flex; justify-content: center;
+  background: var(--bg-alt); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--line); overflow: hidden; display: flex; justify-content: center; padding: 0.75rem;
 }
-.chart-block .chart-img img { height: 560px; width: auto; max-width: 100%; object-fit: contain; display: block; }
+.chart-block .chart-img img { height: 560px; width: auto; max-width: 100%; object-fit: contain; display: block; border-radius: 10px; }
 .chart-note h3 { font-size: 1.6rem; margin-bottom: 1rem; }
 .chart-note p { color: var(--ink-soft); margin-bottom: 1rem; }
 .chart-note .muted { font-size: 0.9rem; color: var(--brand-dark); }
@@ -212,12 +212,12 @@ img { max-width: 100%; display: block; }
 .rolls-band-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 .rolls-band-grid .roll-card {
   border-radius: var(--radius); overflow: hidden; position: relative;
-  background: var(--card); box-shadow: var(--shadow); border: 1px solid var(--line);
+  background: var(--bg-alt); box-shadow: var(--shadow); border: 1px solid var(--line); padding: 0.75rem;
 }
-.rolls-band-grid .roll-card img { width: 100%; height: 340px; object-fit: cover; display: block; transition: transform .5s ease; }
+.rolls-band-grid .roll-card img { width: 100%; height: 340px; object-fit: cover; display: block; border-radius: 10px; transition: transform .5s ease; }
 .rolls-band-grid .roll-card:hover img { transform: scale(1.03); }
 .roll-card .roll-caption {
-  position: absolute; left: 1rem; bottom: 1rem; background: rgba(43,39,35,0.78);
+  position: absolute; left: 1.75rem; bottom: 1.75rem; background: rgba(43,39,35,0.78);
   color: #fff; font-size: 0.82rem; padding: 0.35rem 0.8rem; border-radius: 999px;
   letter-spacing: 0.5px; backdrop-filter: blur(4px);
 }
@@ -233,10 +233,10 @@ img { max-width: 100%; display: block; }
 
 /* 错落网格：12 列，图片大小不一 */
 .mosaic { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: 1.2rem; }
-.mosaic .tile { border-radius: var(--radius); overflow: hidden; position: relative; background: var(--card); box-shadow: var(--shadow); border: 1px solid var(--line); }
-.mosaic .tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.mosaic .tile { border-radius: var(--radius); overflow: hidden; position: relative; background: var(--bg-alt); box-shadow: var(--shadow); border: 1px solid var(--line); padding: 0.75rem; }
+.mosaic .tile img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 10px; transition: transform .5s ease; }
 .mosaic .tile:hover img { transform: scale(1.04); }
-.mosaic .tile .tile-caption { position: absolute; left: 1rem; bottom: 1rem; background: rgba(43,39,35,0.78); color: #fff; font-size: 0.82rem; padding: 0.35rem 0.8rem; border-radius: 999px; letter-spacing: 0.5px; backdrop-filter: blur(4px); }
+.mosaic .tile .tile-caption { position: absolute; left: 1.75rem; bottom: 1.75rem; background: rgba(43,39,35,0.78); color: #fff; font-size: 0.82rem; padding: 0.35rem 0.8rem; border-radius: 999px; letter-spacing: 0.5px; backdrop-filter: blur(4px); }
 
 /* 各 tile 占位（错落） */
 .tile-tall { grid-column: span 5; grid-row: span 3; }
