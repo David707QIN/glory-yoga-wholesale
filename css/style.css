@@ -226,6 +226,17 @@ img { max-width: 100%; display: block; }
   .rolls-band-grid .roll-card img { height: 260px; }
 }
 
+/* ===== 详情图完整展示（不裁切，保留整图文案） ===== */
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.feature-grid .feature-card {
+  border-radius: var(--radius); overflow: hidden; position: relative;
+  background: var(--bg-alt); box-shadow: var(--shadow); border: 1px solid var(--line); padding: 0.75rem;
+}
+.feature-grid .feature-card img { width: 100%; height: auto; display: block; border-radius: 10px; }
+@media (max-width: 720px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== 产品详情页：杂志式错落布局 ===== */
 .product-intro { max-width: 40rem; margin: 0 auto 3.5rem; text-align: center; }
 .product-intro h2 { margin-bottom: 1rem; }
