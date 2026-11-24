@@ -179,6 +179,34 @@ img { max-width: 100%; display: block; }
 .color-range-note .muted { font-size: 0.9rem; color: var(--brand-dark); }
 @media (max-width: 900px) { .color-range-block { grid-template-columns: 1fr; gap: 1.5rem; } }
 
+/* ===== 竖版色卡图（纯色页） ===== */
+.chart-block { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: center; margin-top: 1rem; }
+.chart-block .chart-img {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--line); overflow: hidden; display: flex; justify-content: center;
+}
+.chart-block .chart-img img { height: 560px; width: auto; max-width: 100%; object-fit: contain; display: block; }
+.chart-note h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+.chart-note p { color: var(--ink-soft); margin-bottom: 1rem; }
+.chart-note .muted { font-size: 0.9rem; color: var(--brand-dark); }
+@media (max-width: 900px) {
+  .chart-block { grid-template-columns: 1fr; gap: 1.5rem; }
+  .chart-block .chart-img img { height: auto; width: 100%; }
+}
+
+/* 子类特性卡片（纯色页 5 子类） */
+.subtype-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem; }
+.subtype-card {
+  background: var(--card); border-radius: var(--radius); padding: 1.4rem 1.2rem;
+  box-shadow: var(--shadow); border: 1px solid var(--line); text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.subtype-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(60,45,30,0.14); }
+.subtype-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.subtype-card p { color: var(--ink-soft); font-size: 0.85rem; }
+@media (max-width: 900px) { .subtype-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .subtype-grid { grid-template-columns: 1fr; } }
+
 /* ===== 多卷陈列横幅 ===== */
 .rolls-band { margin-top: 4rem; }
 .rolls-band-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
