@@ -226,15 +226,26 @@ img { max-width: 100%; display: block; }
   .rolls-band-grid .roll-card img { height: 260px; }
 }
 
-/* ===== 详情图完整展示（不裁切，保留整图文案） ===== */
-.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-.feature-grid .feature-card {
+/* ===== 统一规整产品网格：所有图同尺寸，滑动节奏一致 ===== */
+.gallery-uniform { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.gallery-uniform .g-item {
   border-radius: var(--radius); overflow: hidden; position: relative;
-  background: var(--bg-alt); box-shadow: var(--shadow); border: 1px solid var(--line); padding: 0.75rem;
+  background: var(--bg-alt); box-shadow: var(--shadow); border: 1px solid var(--line);
 }
-.feature-grid .feature-card img { width: 100%; height: auto; display: block; border-radius: 10px; }
-@media (max-width: 720px) {
-  .feature-grid { grid-template-columns: 1fr; }
+.gallery-uniform .g-item img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4/3; transition: transform .5s ease; }
+.gallery-uniform .g-item:hover img { transform: scale(1.04); }
+.gallery-uniform .g-item .g-caption {
+  position: absolute; left: 1.1rem; bottom: 1.1rem; background: rgba(43,39,35,0.78);
+  color: #fff; font-size: 0.82rem; padding: 0.35rem 0.8rem; border-radius: 999px;
+  letter-spacing: 0.5px; backdrop-filter: blur(4px);
+}
+.gallery-uniform.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) {
+  .gallery-uniform { grid-template-columns: 1fr 1fr; }
+  .gallery-uniform.cols-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .gallery-uniform, .gallery-uniform.cols-3 { grid-template-columns: 1fr; }
 }
 
 /* ===== 产品详情页：杂志式错落布局 ===== */
