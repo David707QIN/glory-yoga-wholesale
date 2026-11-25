@@ -92,7 +92,7 @@ img { max-width: 100%; display: block; }
 .stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--brand-dark); }
 .stat span { font-size: 0.85rem; color: var(--ink-soft); }
 .hero-card { background: var(--card); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); }
-.hero-card img { border-radius: 10px; }
+.hero-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 10px; }
 
 /* ===== Sections ===== */
 .section { padding: 5rem 0; }
@@ -284,13 +284,15 @@ img { max-width: 100%; display: block; }
 .logo-light span { color: var(--brand); }
 
 .social-links { display: flex; gap: 0.8rem; }
-.social-links a {
+.social-links a,
+.social-links span {
   display: inline-flex; align-items: center; justify-content: center;
   width: 40px; height: 40px; border-radius: 50%;
   color: #fff; background: rgba(255,255,255,0.1);
   transition: background .2s, transform .15s;
 }
 .social-links a:hover { background: var(--brand); transform: translateY(-2px); }
+.social-links span { opacity: .45; cursor: default; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
