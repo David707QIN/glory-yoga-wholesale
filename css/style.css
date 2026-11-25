@@ -84,14 +84,14 @@ img { max-width: 100%; display: block; }
 
 /* ===== Hero ===== */
 .hero { padding: 5rem 0 4rem; overflow: hidden; }
-.hero-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: center; }
+.hero-inner { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 3rem; align-items: center; }
 .hero-text h1 em { color: var(--brand); font-style: italic; }
 .hero-sub { margin: 1.4rem 0 2rem; color: var(--ink-soft); font-size: 1.1rem; max-width: 34rem; }
 .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; }
 .stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--brand-dark); }
 .stat span { font-size: 0.85rem; color: var(--ink-soft); }
-.hero-card { background: var(--card); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); }
+.hero-card { background: var(--card); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); max-width: 460px; }
 .hero-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 10px; }
 
 /* ===== Sections ===== */
