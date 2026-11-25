@@ -109,19 +109,20 @@ img { max-width: 100%; display: block; }
 .stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--brand-dark); }
 .stat span { font-size: 0.85rem; color: var(--ink-soft); }
 .hero-card { position: relative; background: var(--card); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); max-width: 460px; }
-.hero-card > img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 10px; }
-/* 首屏定制提示：浮在工厂图右下角，一眼看懂"能印你的 logo" */
-.hero-badge {
-  position: absolute; right: -.6rem; bottom: -.8rem;
-  display: flex; align-items: center; gap: .7rem;
-  background: #fff; border: 1px solid var(--line); border-radius: 14px;
-  padding: .55rem 1rem .55rem .55rem;
-  box-shadow: 0 14px 34px rgba(43, 39, 35, .16);
+.hero-figure { position: relative; border-radius: 10px; overflow: hidden; }
+.hero-figure img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+/* 首屏定制提示：图片底部渐变压字，避免浮卡贴标签感 */
+.hero-tag {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 2.2rem 1.2rem .95rem;
+  background: linear-gradient(to top, rgba(30, 26, 22, .82) 0%, rgba(30, 26, 22, .55) 45%, rgba(30, 26, 22, 0) 100%);
+  color: #fff; font-size: .72rem; letter-spacing: 1.6px;
+  text-transform: uppercase; text-align: center; line-height: 1.4;
 }
-.hero-badge img { width: 56px; height: 56px; flex: none; border-radius: 10px; object-fit: cover; display: block; }
-.hero-badge-text { display: flex; flex-direction: column; line-height: 1.35; }
-.hero-badge-text strong { font-size: .85rem; color: var(--ink); white-space: nowrap; }
-.hero-badge-text span { font-size: .72rem; color: var(--ink-soft); white-space: nowrap; }
+
+@media (max-width: 620px) {
+  .hero-tag { font-size: .62rem; letter-spacing: .8px; padding: 1.8rem .7rem .8rem; white-space: nowrap; }
+}
 
 /* ===== Sections ===== */
 .section { padding: 5rem 0; }
