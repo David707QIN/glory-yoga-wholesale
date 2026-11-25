@@ -2,14 +2,16 @@
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
 
-// Close nav when a link is clicked (mobile)
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+  // Close nav when a link is clicked (mobile)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+}
 
 // Footer year (guard for pages without #year)
 const yearEl = document.getElementById('year');
@@ -31,15 +33,15 @@ if (form) {
         headers: { Accept: 'application/json' }
       });
       if (res.ok) {
-        form.innerHTML = '<p style="text-align:center;font-size:1.15rem;padding:1rem 0;">Thank you! Your inquiry has been sent. We will reply within 24 hours.</p>';
+        form.innerHTML = '<p style="text-align:center;font-size:1.15rem;padding:1rem 0;line-height:1.7;">Thank you! Your inquiry has been sent. We will reply within 24 hours.<br><a href="https://wa.me/8615319949017" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600;">Chat with us on WhatsApp instead →</a></p>';
       } else {
         btn.disabled = false;
-        btn.textContent = 'Send Inquiry';
+        btn.textContent = 'Send It Over';
         alert('Something went wrong. Please try again, or contact us via WhatsApp or email.');
       }
     } catch (err) {
       btn.disabled = false;
-      btn.textContent = 'Send Inquiry';
+      btn.textContent = 'Send It Over';
       alert('Network error. Please try again, or contact us via WhatsApp or email.');
     }
   });
