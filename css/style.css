@@ -111,18 +111,7 @@ img { max-width: 100%; display: block; }
 .hero-card { position: relative; background: var(--card); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow); max-width: 460px; }
 .hero-figure { position: relative; border-radius: 10px; overflow: hidden; }
 .hero-figure img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
-/* 首屏定制提示：图片底部渐变压字，避免浮卡贴标签感 */
-.hero-tag {
-  position: absolute; left: 0; right: 0; bottom: 0;
-  padding: 2.2rem 1.2rem .95rem;
-  background: linear-gradient(to top, rgba(30, 26, 22, .82) 0%, rgba(30, 26, 22, .55) 45%, rgba(30, 26, 22, 0) 100%);
-  color: #fff; font-size: .72rem; letter-spacing: 1.6px;
-  text-transform: uppercase; text-align: center; line-height: 1.4;
-}
 
-@media (max-width: 620px) {
-  .hero-tag { font-size: .62rem; letter-spacing: .8px; padding: 1.8rem .7rem .8rem; white-space: nowrap; }
-}
 
 /* ===== Sections ===== */
 .section { padding: 5rem 0; }
