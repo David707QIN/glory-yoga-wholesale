@@ -167,13 +167,9 @@ img { max-width: 100%; display: block; }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .gallery-item { background: var(--card); border-radius: var(--radius); padding: 0.5rem; box-shadow: var(--shadow); border: 1px solid var(--line); }
 .gallery-item img { width: 100%; height: 260px; object-fit: cover; border-radius: 10px; }
-/* Logo mosaic wall — compact 6-col grid, 53 real photos in themed groups */
-.logo-mosaic { display: flex; flex-direction: column; gap: 1.6rem; }
-.m-group-title { display: flex; align-items: center; gap: .8rem; margin-bottom: .1rem; }
-.m-group-title span { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--ink); white-space: nowrap; }
-.m-group-title::after { content: ''; flex: 1; height: 1px; background: var(--line); }
-.m-group-title em { font-style: normal; font-size: .72rem; color: var(--brand-dark); letter-spacing: 1px; text-transform: uppercase; }
-.m-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: .55rem; }
+/* Logo mosaic wall — one continuous 6-col grid, 40 real photos, gaps auto-filled */
+.logo-mosaic { width: 100%; }
+.m-grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-flow: row dense; gap: .55rem; }
 .m-item { position: relative; margin: 0; overflow: hidden; background: var(--bg-alt); border-radius: 8px; aspect-ratio: 1 / 1; }
 .m-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
 .m-item:hover img { transform: scale(1.08); }
