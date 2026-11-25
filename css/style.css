@@ -360,6 +360,8 @@ img { max-width: 100%; display: block; }
   .grid-3, .grid-4, .steps, .specs, .form-row { grid-template-columns: 1fr; }
   /* 手机首屏紧凑一档，让定制实拍图能进入可视区（地址栏约占 100px） */
   .hero { padding: 3.2rem 0 3rem; }
+  /* 首屏 eyebrow 收成一行，避免折行后被吸顶导航切掉，同时给上方省出一行空间 */
+  .hero-text .eyebrow { font-size: .7rem; letter-spacing: 1.4px; }
   .hero-sub { margin: 1.1rem 0 1.7rem; font-size: 1rem; }
   .hero-visual { margin-top: 1.6rem; }
   .hero-stats { gap: 1.5rem; }
