@@ -166,6 +166,14 @@ img { max-width: 100%; display: block; }
 .contact-info a { color: var(--brand); font-weight: 600; }
 .contact-info strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #b8ac9c; margin-bottom: 0.2rem; }
 
+/* 首页联系区：深棕大色块，白表单浮于其上，制造强烈明暗对比 */
+#contact { background: var(--ink); }
+#contact .section-head h2 { color: #fff; }
+#contact .section-head p { color: #d8cdbf; }
+#contact .eyebrow { background: rgba(200,138,90,0.22); color: #e8bfa0; }
+#contact .contact-info { background: #3a352f; border: 1px solid rgba(255,255,255,0.1); }
+#contact .contact-form { box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+
 /* ===== Page hero (sub-pages) ===== */
 .page-hero { padding: 4rem 0 3rem; text-align: center; background: var(--bg-alt); }
 .page-hero h1 { margin-bottom: 1rem; }
