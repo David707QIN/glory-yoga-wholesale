@@ -168,8 +168,8 @@ img { max-width: 100%; display: block; }
 .gallery-item { background: var(--card); border-radius: var(--radius); padding: 0.5rem; box-shadow: var(--shadow); border: 1px solid var(--line); }
 .gallery-item img { width: 100%; height: 260px; object-fit: cover; border-radius: 10px; }
 /* Logo mosaic wall — one continuous 6-col grid, studio scenes first & last */
-.logo-mosaic { width: 100%; max-width: 680px; margin: 0 auto; }
-.m-grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-flow: row dense; gap: .4rem; }
+.logo-mosaic { width: 100%; max-width: 780px; margin: 0 auto; }
+.m-grid { display: grid; grid-template-columns: repeat(8, 1fr); grid-auto-flow: row dense; gap: .4rem; }
 .m-item { position: relative; margin: 0; overflow: hidden; background: var(--bg-alt); border-radius: 8px; aspect-ratio: 1 / 1; }
 .m-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
 .m-item:hover img { transform: scale(1.08); }
@@ -185,6 +185,7 @@ img { max-width: 100%; display: block; }
   .m-grid { grid-template-columns: repeat(3, 1fr); gap: .4rem; }
   .m-item.m-big { grid-column: span 3; grid-row: span 1; aspect-ratio: 4 / 3; }
   .m-item.m-wide { grid-column: span 3; aspect-ratio: 16 / 9; }
+  .m-item.m-tall { grid-column: span 3; grid-row: span 1; aspect-ratio: 4 / 3; }
 }
 @media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .gallery { grid-template-columns: 1fr; } }
