@@ -478,6 +478,9 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 900px) {
   .page-multicolor .pd-card img { height: 240px; }
+  /* 桌面右列变窄的规则不能带到手机，否则图片和规格表挤成两列 */
+  .page-multicolor .color-range-block { grid-template-columns: 1fr; gap: 1.5rem; }
+  .page-multicolor .color-range-img { max-width: 100%; }
   .page-multicolor .color-range-img img { height: 320px; }
   .page-multicolor .custom-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 86px; }
   .page-multicolor .custom-grid .pd-card:nth-child(n) { grid-column: span 1; grid-row: span 2; }
