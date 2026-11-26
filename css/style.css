@@ -367,3 +367,52 @@ img { max-width: 100%; display: block; }
   .hero-stats { gap: 1.5rem; }
   .direct-links { flex-direction: column; }
 }
+
+/* ===== Workshop page (factory.html) ===== */
+/* 注意：img 带 width/height 属性时 aspect-ratio 会被压过，统一用固定高度 + object-fit 裁切 */
+.ws-hero { padding: 2.5rem 0 0; }
+.ws-hero figure { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--bg-alt); }
+.ws-hero img { width: 100%; height: clamp(240px, 34vw, 430px); object-fit: cover; display: block; }
+.ws-note { margin-top: .9rem; font-size: .88rem; color: var(--ink-soft); text-align: center; }
+
+.ws-shot { margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--bg-alt); }
+.ws-shot img { display: block; width: 100%; object-fit: cover; transition: transform .6s ease; }
+.ws-shot:hover img { transform: scale(1.03); }
+
+.ws-bento { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.ws-bento .ws-shot img { height: clamp(240px, 30vw, 400px); }
+.ws-bento .ws-wide { grid-column: 1 / -1; }
+.ws-bento .ws-wide img { height: clamp(240px, 42vw, 560px); }
+
+.ws-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2rem; align-items: center; }
+.ws-split .ws-shot img { height: clamp(300px, 37vw, 460px); }
+.ws-split .ws-tall img { height: clamp(360px, 45vw, 540px); }
+.ws-split p { color: var(--ink-soft); font-size: 1.05rem; }
+.ws-split p + p { margin-top: .85rem; }
+.ws-split h2 { margin-bottom: .9rem; }
+
+.ws-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.ws-trio .ws-shot img { height: clamp(220px, 24vw, 340px); }
+
+.ws-duo { display: grid; grid-template-columns: 1.45fr 1fr; gap: 1.5rem; align-items: start; }
+.ws-duo .ws-shot img { height: clamp(260px, 30vw, 420px); }
+
+.ws-head { max-width: 44rem; margin-bottom: 2.2rem; }
+.ws-head h2 { margin-bottom: .7rem; }
+.ws-head p { color: var(--ink-soft); font-size: 1.05rem; }
+
+@media (max-width: 900px) {
+  .ws-split { grid-template-columns: 1fr; gap: 1.6rem; }
+  .ws-split .ws-shot img { height: 340px; }
+  .ws-split .ws-tall img { height: 420px; }
+  .ws-duo { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .ws-bento, .ws-trio { grid-template-columns: 1fr; gap: 1.1rem; }
+  .ws-bento .ws-shot img, .ws-bento .ws-wide img { height: 240px; }
+  .ws-trio .ws-shot img { height: 260px; }
+  .ws-split .ws-shot img { height: 260px; }
+  .ws-split .ws-tall img { height: 320px; }
+  .ws-duo .ws-shot img { height: 240px; }
+  .ws-hero img { height: 220px; }
+}
