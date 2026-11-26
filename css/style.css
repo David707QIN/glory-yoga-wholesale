@@ -410,3 +410,11 @@ img { max-width: 100%; display: block; }
 /* Two detail cards side by side */
 .pd-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 @media (max-width: 900px) { .pd-duo { grid-template-columns: 1fr; } }
+
+/* Custom logo case gallery */
+.custom-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.custom-grid .pd-card { border-radius: 12px; }
+.custom-grid .pd-card img { height: 220px; }
+.custom-grid .pd-card figcaption { padding: .8rem 1rem; font-size: .85rem; font-weight: 600; color: var(--ink); }
+@media (max-width: 900px) { .custom-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .custom-grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; } .custom-grid .pd-card img { height: 160px; } }
