@@ -434,9 +434,15 @@ img { max-width: 100%; display: block; }
 .page-multicolor .pd-card figcaption { padding: .8rem 1rem; }
 .page-multicolor .pd-img-thickness { object-position: center 88%; }
 
-.page-multicolor .color-range-block { gap: 2rem; }
+.page-multicolor .color-range-block { grid-template-columns: 1.2fr .9fr; gap: 2rem; align-items: center; }
 .page-multicolor .color-range-img { max-width: 440px; }
-.page-multicolor .color-range-img img { height: 380px; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
+.page-multicolor .color-range-img img { height: 340px; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
+.page-multicolor .color-range-note h2 { font-size: clamp(1.5rem, 2.4vw, 1.95rem); margin-bottom: .8rem; }
+.page-multicolor .color-range-note p { font-size: .95rem; margin-bottom: .8rem; }
+.page-multicolor .color-range-note .pd-specs { margin-top: 1rem; }
+.page-multicolor .color-range-note .pd-spec { padding: .7rem .85rem; }
+.page-multicolor .color-range-note .pd-spec strong { font-size: .68rem; }
+.page-multicolor .color-range-note .pd-spec span { font-size: .86rem; }
 .page-multicolor .custom-intro { margin: 2.4rem 0 1.6rem; }
 
 /* Stitched logo-case collage: four-column row bands, no dead space */
