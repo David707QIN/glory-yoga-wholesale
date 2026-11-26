@@ -326,7 +326,7 @@ img { max-width: 100%; display: block; }
 /* ===== Footer ===== */
 .footer { background: var(--ink); color: #c9bfb2; padding: 2.5rem 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.logo-light { color: #fff; background: #f2ece2; padding: 5px 10px; border-radius: 8px; }
+.logo-light { color: #fff; }
 .logo-light span { color: var(--brand); }
 
 .social-links { display: flex; gap: 0.8rem; }
