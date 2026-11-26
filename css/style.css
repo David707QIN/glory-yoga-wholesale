@@ -406,3 +406,7 @@ img { max-width: 100%; display: block; }
 /* Full collection poster */
 .pd-poster { max-width: 720px; margin: 0 auto; }
 .pd-poster img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+/* Two detail cards side by side */
+.pd-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 900px) { .pd-duo { grid-template-columns: 1fr; } }
