@@ -402,3 +402,7 @@ img { max-width: 100%; display: block; }
   .pd-card img { height: 260px; }
   .pd-specs { grid-template-columns: 1fr; }
 }
+
+/* Full collection poster */
+.pd-poster { max-width: 720px; margin: 0 auto; }
+.pd-poster img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
