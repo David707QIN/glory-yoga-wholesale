@@ -381,3 +381,24 @@ img { max-width: 100%; display: block; }
   .ws-wall { padding: 2rem 0 3rem; }
   .ws-wall img { border-radius: 12px; }
 }
+
+/* ===== Product detail pages (multicolor / reusable) ===== */
+.pd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.pd-card { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.pd-card img { display: block; width: 100%; height: 300px; object-fit: cover; background: var(--bg-alt); }
+.pd-card figcaption { padding: 1.1rem 1.3rem; font-size: .92rem; line-height: 1.6; color: var(--ink-soft); }
+.pd-card figcaption strong { display: block; color: var(--ink); font-size: 1rem; margin-bottom: .15rem; }
+
+.pd-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 1.4rem; }
+.pd-spec { background: var(--card); padding: .85rem 1rem; }
+.pd-spec strong { display: block; font-size: .72rem; color: var(--brand-dark); text-transform: uppercase; letter-spacing: .8px; margin-bottom: .2rem; }
+.pd-spec span { color: var(--ink-soft); font-size: .9rem; }
+
+@media (max-width: 900px) {
+  .pd-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .pd-card img { height: 340px; }
+}
+@media (max-width: 620px) {
+  .pd-card img { height: 260px; }
+  .pd-specs { grid-template-columns: 1fr; }
+}
