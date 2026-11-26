@@ -75,7 +75,7 @@ img { max-width: 100%; display: block; }
 .logo img { display: block; height: 48px; width: auto; }
 .logo span { color: var(--brand); }
 .logo-light img { height: 40px; }
-@media (max-width: 620px) { .logo img { height: 36px; } .logo-light img { height: 32px; } }
+@media (max-width: 620px) { .logo img { height: 36px; } .logo-light img { height: 32px; } .social-links { gap: 0.8rem; } }
 .nav-links { display: flex; gap: 2rem; }
 .nav-links a { font-size: 0.95rem; color: var(--ink-soft); font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--brand-dark); }
@@ -329,7 +329,7 @@ img { max-width: 100%; display: block; }
 .logo-light { color: #fff; }
 .logo-light span { color: var(--brand); }
 
-.social-links { display: flex; gap: 0.65rem; align-items: center; }
+.social-links { display: flex; gap: 1rem; align-items: center; }
 .social-links a,
 .social-links span { display: inline-flex; transition: transform .15s, opacity .2s; }
 .social-links img { display: block; width: 36px; height: 36px; }
