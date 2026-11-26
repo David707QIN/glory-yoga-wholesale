@@ -449,16 +449,28 @@ img { max-width: 100%; display: block; }
 .page-multicolor .custom-grid .pd-card img { flex: 1 1 0; min-height: 0; height: auto; object-fit: cover; }
 .page-multicolor .custom-grid .pd-card:nth-child(3) img,
 .page-multicolor .custom-grid .pd-card:nth-child(4) img { object-position: center 22%; }
-.page-multicolor .custom-grid .pd-card:nth-child(8) img { object-position: center 15%; }
+.page-multicolor .custom-grid .pd-card:nth-child(8) img { object-position: center 25%; }
+/* 最后一排是宽卡，给足高度，避免手绘 logo 被压成窄条 */
+.page-multicolor .custom-grid .pd-card:nth-child(7),
+.page-multicolor .custom-grid .pd-card:nth-child(8) { grid-row: span 4; }
 .page-multicolor .custom-grid .pd-card figcaption { flex: 0 0 auto; padding: .5rem .75rem; font-size: .8rem; line-height: 1.35; }
 
 @media (max-width: 900px) {
   .page-multicolor .pd-card img { height: 240px; }
   .page-multicolor .color-range-img img { height: 320px; }
   .page-multicolor .custom-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 86px; }
-  .page-multicolor .custom-grid .pd-card:nth-child(n) { grid-column: span 1; }
+  .page-multicolor .custom-grid .pd-card:nth-child(n) { grid-column: span 1; grid-row: span 2; }
 }
 @media (max-width: 620px) {
+  /* 手机首屏收紧：标题和段落都小一点，上下留白压短 */
+  .page-multicolor .page-hero { padding: 1.4rem 0 1rem; }
+  .page-multicolor .page-hero .eyebrow { margin-bottom: .35rem; font-size: .7rem; }
+  .page-multicolor .page-hero h1 { font-size: 1.95rem; line-height: 1.2; margin-bottom: .6rem; }
+  .page-multicolor .page-hero p { font-size: .9rem; line-height: 1.55; }
+  .page-multicolor .section { padding: 2.4rem 0; }
+  .page-multicolor .product-intro { margin-bottom: 1.6rem; }
+  .page-multicolor .product-intro h2 { font-size: 1.45rem; }
+  .page-multicolor .product-intro p { font-size: .9rem; }
   .page-multicolor .pd-card img { height: 190px; }
   .page-multicolor .pd-poster { max-width: 100%; }
   .page-multicolor .color-range-img img { height: 260px; }
