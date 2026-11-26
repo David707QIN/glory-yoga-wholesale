@@ -71,8 +71,11 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--line);
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; }
+.logo { display: inline-flex; align-items: center; }
+.logo img { display: block; height: 40px; width: auto; }
 .logo span { color: var(--brand); }
+.logo-light img { height: 38px; }
+@media (max-width: 620px) { .logo img { height: 32px; } .logo-light img { height: 32px; } }
 .nav-links { display: flex; gap: 2rem; }
 .nav-links a { font-size: 0.95rem; color: var(--ink-soft); font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--brand-dark); }
