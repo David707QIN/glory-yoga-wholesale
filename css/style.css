@@ -455,6 +455,12 @@ img { max-width: 100%; display: block; }
 .page-multicolor .custom-grid .pd-card:nth-child(8) { grid-row: span 4; }
 .page-multicolor .custom-grid .pd-card figcaption { flex: 0 0 auto; padding: .5rem .75rem; font-size: .8rem; line-height: 1.35; }
 
+/* 桌面屏幕适当放大展示尺寸，细节更清楚；手机/平板保持紧凑 */
+@media (min-width: 901px) {
+  .page-multicolor .pd-poster { max-width: 640px; }
+  .page-multicolor .pd-card img { height: 230px; }
+  .page-multicolor .pd-grid .pd-card img { height: 215px; }
+}
 @media (max-width: 900px) {
   .page-multicolor .pd-card img { height: 240px; }
   .page-multicolor .color-range-img img { height: 320px; }
