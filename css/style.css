@@ -477,6 +477,11 @@ img { max-width: 100%; display: block; }
   .page-multicolor .product-intro { margin-bottom: 1.6rem; }
   .page-multicolor .product-intro h2 { font-size: 1.45rem; }
   .page-multicolor .product-intro p { font-size: .9rem; }
+  /* 规格表手机端改 2 列，别一格占满整行把页面拉长 */
+  .page-multicolor .pd-specs { grid-template-columns: repeat(2, 1fr); }
+  .page-multicolor .pd-spec { padding: .6rem .7rem; }
+  .page-multicolor .pd-spec strong { font-size: .65rem; margin-bottom: .1rem; }
+  .page-multicolor .pd-spec span { font-size: .82rem; line-height: 1.35; }
   .page-multicolor .pd-card img { height: 190px; }
   .page-multicolor .pd-poster { max-width: 100%; }
   .page-multicolor .color-range-img img { height: 260px; }
