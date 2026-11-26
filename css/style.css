@@ -455,11 +455,20 @@ img { max-width: 100%; display: block; }
 .page-multicolor .custom-grid .pd-card:nth-child(8) { grid-row: span 4; }
 .page-multicolor .custom-grid .pd-card figcaption { flex: 0 0 auto; padding: .5rem .75rem; font-size: .8rem; line-height: 1.35; }
 
-/* 桌面屏幕适当放大展示尺寸，细节更清楚；手机/平板保持紧凑 */
+/* 桌面整体收紧一档：显示尺寸变小，但图片源文件仍是原分辨率，不影响清晰度 */
 @media (min-width: 901px) {
-  .page-multicolor .pd-poster { max-width: 640px; }
-  .page-multicolor .pd-card img { height: 230px; }
-  .page-multicolor .pd-grid .pd-card img { height: 215px; }
+  .page-multicolor .page-hero { padding: 2.2rem 0 1.6rem; }
+  .page-multicolor .page-hero h1 { font-size: clamp(2rem, 3.5vw, 2.8rem); }
+  .page-multicolor .page-hero p { font-size: .95rem; }
+  .page-multicolor .section { padding: 2.8rem 0; }
+  .page-multicolor .product-intro { margin-bottom: 1.8rem; }
+  .page-multicolor .product-intro h2 { font-size: clamp(1.5rem, 2.5vw, 1.95rem); }
+  .page-multicolor .pd-poster { max-width: 580px; }
+  .page-multicolor .pd-card img { height: 210px; }
+  .page-multicolor .pd-grid .pd-card img { height: 200px; }
+  .page-multicolor .pd-card figcaption { padding: .7rem .9rem; }
+  .page-multicolor .color-range-img img { height: 340px; }
+  .page-multicolor .custom-grid { grid-auto-rows: 74px; }
 }
 @media (max-width: 900px) {
   .page-multicolor .pd-card img { height: 240px; }
