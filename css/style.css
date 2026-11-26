@@ -329,20 +329,13 @@ img { max-width: 100%; display: block; }
 .logo-light { color: #fff; }
 .logo-light span { color: var(--brand); }
 
-.social-links { display: flex; gap: 0.8rem; }
+.social-links { display: flex; gap: 0.65rem; align-items: center; }
 .social-links a,
-.social-links span {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; border-radius: 50%;
-  color: #fff; background: rgba(255,255,255,0.1);
-  transition: background .2s, transform .15s;
-}
-.social-links a:hover { background: var(--brand); transform: translateY(-2px); }
-.social-links span { opacity: .55; cursor: default; }
-.social-links [aria-label="WhatsApp"] svg { fill: var(--wa); }
-.social-links [aria-label="Facebook"] svg { fill: #1877f2; }
-.social-links [aria-label="Instagram"] svg { fill: #e1306c; }
-.social-links [aria-label="YouTube"] svg { fill: #ff0000; }
+.social-links span { display: inline-flex; transition: transform .15s, opacity .2s; }
+.social-links img { display: block; width: 36px; height: 36px; }
+.social-links a:hover { transform: translateY(-2px); }
+.social-links span { opacity: .8; cursor: default; }
+.social-links span:hover { opacity: 1; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
