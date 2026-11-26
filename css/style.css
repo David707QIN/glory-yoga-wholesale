@@ -471,7 +471,7 @@ img { max-width: 100%; display: block; }
   /* 手机首屏收紧：标题和段落都小一点，上下留白压短 */
   .page-multicolor .page-hero { padding: 1.4rem 0 1rem; }
   .page-multicolor .page-hero .eyebrow { margin-bottom: .35rem; font-size: .7rem; }
-  .page-multicolor .page-hero h1 { font-size: 1.95rem; line-height: 1.2; margin-bottom: .6rem; }
+  .page-multicolor .page-hero h1 { font-size: 1.75rem; line-height: 1.25; margin-bottom: .6rem; }
   .page-multicolor .page-hero p { font-size: .9rem; line-height: 1.55; }
   .page-multicolor .section { padding: 2.4rem 0; }
   .page-multicolor .product-intro { margin-bottom: 1.6rem; }
