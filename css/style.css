@@ -180,11 +180,9 @@ img { max-width: 100%; display: block; }
 .contact-info li { font-size: 0.95rem; }
 .contact-info a { color: var(--brand); font-weight: 600; }
 .contact-info strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #b8ac9c; margin-bottom: 0.2rem; }
-/* 桌面：右卡与左卡等高，联系方式在卡内铺开，消除底部悬空 */
+/* 桌面：右卡保持自然紧凑高度，垂直居中于左侧表单旁 */
 @media (min-width: 901px) {
-  .contact-wrap { align-items: stretch; }
-  .contact-info { display: flex; flex-direction: column; }
-  .contact-info ul { flex: 1; justify-content: space-evenly; gap: 0; }
+  .contact-wrap { align-items: center; }
 }
 
 /* ===== Page hero (sub-pages) ===== */
