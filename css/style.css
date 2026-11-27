@@ -621,3 +621,16 @@ img { max-width: 100%; display: block; }
 .page-solid .pd-colorcharts .pd-card figcaption { text-align: center; }
 @media (max-width: 900px) { .page-solid .pd-colorcharts .pd-card img { height: 380px; } }
 @media (max-width: 620px) { .page-solid .pd-colorcharts .pd-card img { height: 330px; } }
+
+/* 纯色页：定制工艺卡片 + 尺寸图完整显示 */
+.page-solid .pd-craft .pd-card img { object-fit: contain; height: 210px; }
+@media (max-width: 900px) { .page-solid .pd-craft .pd-card img { height: 220px; } }
+@media (max-width: 620px) { .page-solid .pd-craft .pd-card img { height: 190px; } }
+.page-solid .custom-sizes-poster { max-width: 560px; margin: 0 auto; }
+.page-solid .custom-sizes-poster img { object-fit: contain; }
+
+/* 纯色页定制工艺：手机端 2 列，避免单列过长 */
+@media (max-width: 620px) {
+  .page-solid .pd-craft { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+  .page-solid .pd-craft .pd-card img { height: 150px; }
+}
