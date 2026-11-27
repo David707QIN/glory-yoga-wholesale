@@ -682,3 +682,10 @@ img { max-width: 100%; display: block; }
 }
 .page-foldable .gallery-uniform .g-item img { height: auto; }
 .page-foldable .gallery-uniform { max-width: 880px; margin-left: auto; margin-right: auto; }
+/* Foldable desktop: tighter vertical rhythm between sections */
+@media (min-width: 901px) {
+  .page-foldable .section { padding: 3.2rem 0; }
+  .page-foldable .section-head { margin-bottom: 2.2rem; }
+  .page-foldable .product-intro { margin-bottom: 2.2rem; }
+  .page-foldable .hero { padding-bottom: 0; }
+}
