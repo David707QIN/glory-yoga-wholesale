@@ -672,12 +672,14 @@ img { max-width: 100%; display: block; }
   padding: .55rem .3rem .2rem; border-radius: 0; text-align: center;
   backdrop-filter: none; font-weight: 500;
 }
-/* Mobile: compact the logo mosaic (uniform 3-col squares, no holes) */
+/* Mobile: 2-col masonry mosaic (varied ratios by class, no holes by design) */
 @media (max-width: 620px) {
-  .m-grid { grid-template-columns: repeat(3, 1fr); gap: .35rem; }
-  .m-item, .m-item.m-big, .m-item.m-wide, .m-item.m-tall {
-    grid-column: span 1; grid-row: span 1; aspect-ratio: 1 / 1;
-  }
+  .m-grid { display: block; columns: 2; column-gap: .35rem; }
+  .m-item { display: block; width: 100%; margin: 0 0 .35rem; break-inside: avoid; }
+  .m-item { aspect-ratio: 1 / 1; }
+  .m-item.m-big { aspect-ratio: 4 / 3; }
+  .m-item.m-wide { aspect-ratio: 16 / 10; }
+  .m-item.m-tall { aspect-ratio: 3 / 4; }
 }
 .page-foldable .gallery-uniform .g-item img { height: auto; }
 .page-foldable .gallery-uniform { max-width: 880px; margin-left: auto; margin-right: auto; }
