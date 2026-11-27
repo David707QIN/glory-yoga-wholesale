@@ -208,10 +208,7 @@ img { max-width: 100%; display: block; }
   .m-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (max-width: 620px) {
-  .m-grid { grid-template-columns: repeat(3, 1fr); gap: .4rem; }
-  .m-item.m-big { grid-column: span 3; grid-row: span 1; aspect-ratio: 4 / 3; }
-  .m-item.m-wide { grid-column: span 3; aspect-ratio: 16 / 9; }
-  .m-item.m-tall { grid-column: span 3; grid-row: span 1; aspect-ratio: 4 / 3; }
+  /* 手机端马赛克布局统一放在下方 masonry 区块处理 */
 }
 @media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .gallery { grid-template-columns: 1fr; } }
@@ -672,11 +669,15 @@ img { max-width: 100%; display: block; }
   padding: .55rem .3rem .2rem; border-radius: 0; text-align: center;
   backdrop-filter: none; font-weight: 500;
 }
-/* Mobile: 2-col masonry mosaic (varied ratios by class, no holes by design) */
+/* Desktop: the two .m-col wrappers vanish — figures flow in the 8-col grid
+   exactly like before, restored via inline order attributes */
+.m-col { display: contents; }
+/* Mobile: two hand-split flex columns, heights pre-balanced — no end holes */
 @media (max-width: 620px) {
-  .m-grid { display: block; columns: 2; column-gap: .35rem; }
-  .m-item { display: block; width: 100%; margin: 0 0 .35rem; break-inside: avoid; }
-  .m-item { aspect-ratio: 1 / 1; }
+  .m-grid { display: flex; gap: .35rem; }
+  .m-col { display: flex; flex-direction: column; gap: .35rem; flex: 1 1 0; min-width: 0; }
+  .m-item { margin: 0; order: 0; aspect-ratio: 1 / 1; }
+  .m-item.m-only-desktop { display: none; } /* mosaic-47 与 63 同场景，只留给电脑端补位 */
   .m-item.m-big { aspect-ratio: 4 / 3; }
   .m-item.m-wide { aspect-ratio: 16 / 10; }
   .m-item.m-tall { aspect-ratio: 3 / 4; }
