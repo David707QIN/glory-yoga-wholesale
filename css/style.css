@@ -656,3 +656,4 @@ img { max-width: 100%; display: block; }
   .page-foldable .fd-matte-grid .pd-card img { height: 260px; }
   .page-foldable .fd-duo .pd-card img { height: 320px; }
 }
+.page-foldable .gallery-uniform .g-item img { aspect-ratio: 1 / 1; }
