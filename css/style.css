@@ -180,22 +180,20 @@ img { max-width: 100%; display: block; }
 .contact-info li { font-size: 0.95rem; }
 .contact-info a { color: var(--brand); font-weight: 600; }
 .contact-info strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #b8ac9c; margin-bottom: 0.2rem; }
-/* 桌面：深色整块包裹，白卡表单浮于其上，右侧裸排 + 细线分隔 */
+/* 桌面：浅色精致版——白卡表单 + 右侧裸排，竖线分隔 + 大标题 + 细线节奏 */
 @media (min-width: 901px) {
-  .contact-wrap {
-    grid-template-columns: 1.35fr 0.85fr;
-    align-items: center;
-    gap: 3.5rem;
-    background: var(--ink);
-    border-radius: var(--radius);
-    padding: 2.5rem;
+  .contact-wrap { grid-template-columns: 1.4fr 0.85fr; align-items: center; gap: 2.5rem; }
+  .contact-info {
+    background: transparent; color: var(--ink);
+    border-radius: 0; border-left: 1px solid rgba(43,39,35,.18);
+    padding: 0 0 0 3rem;
   }
-  .contact-form { box-shadow: none; }
-  .contact-info { background: transparent; padding: 0; }
-  .contact-info h3 { font-size: 1.5rem; }
-  .contact-info li { padding: .9rem 0; border-bottom: 1px solid rgba(245,239,230,.15); }
-  .contact-info li:last-child { border-bottom: 0; }
-  .contact-info a { font-size: 1.02rem; }
+  .contact-info h3 { color: var(--ink); font-size: 2rem; margin-bottom: 2rem; }
+  .contact-info ul { gap: 1.5rem; }
+  .contact-info li { padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+  .contact-info li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .contact-info strong { color: var(--brand-dark); }
+  .contact-info a { font-size: 1.05rem; }
 }
 
 /* ===== Page hero (sub-pages) ===== */
