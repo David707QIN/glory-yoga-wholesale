@@ -634,3 +634,25 @@ img { max-width: 100%; display: block; }
   .page-solid .pd-craft { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
   .page-solid .pd-craft .pd-card img { height: 150px; }
 }
+
+/* ===== Foldable page ===== */
+.page-foldable .pd-card img { object-fit: contain; background: #fff; }
+.page-foldable a.pd-card { display: block; text-decoration: none; }
+.page-foldable .fd-overview .pd-card img { height: 340px; }
+.page-foldable .fd-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: stretch; }
+.page-foldable .fd-duo .pd-card { margin: 0; height: 100%; }
+.page-foldable .fd-duo .pd-card img { height: 460px; }
+.page-foldable .fd-matte-grid .pd-card img { height: 340px; }
+.page-foldable .fd-scene { max-width: 560px; }
+.page-foldable .fd-gallery { margin-top: 1.5rem; }
+.page-foldable .product-intro .pd-specs { max-width: 34rem; margin-left: auto; margin-right: auto; }
+@media (max-width: 900px) {
+  .page-foldable .fd-duo { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .page-foldable .fd-overview { grid-template-columns: 1fr; }
+  .page-foldable .fd-matte-grid { grid-template-columns: 1fr; }
+  .page-foldable .fd-overview .pd-card img,
+  .page-foldable .fd-matte-grid .pd-card img { height: 260px; }
+  .page-foldable .fd-duo .pd-card img { height: 320px; }
+}
