@@ -613,3 +613,11 @@ img { max-width: 100%; display: block; }
 .page-solid .pd-pattern .pd-card img { object-fit: contain; height: 260px; }
 @media (max-width: 900px) { .page-solid .pd-pattern .pd-card img { height: 240px; } }
 @media (max-width: 620px) { .page-solid .pd-pattern .pd-card img { height: 210px; } }
+
+/* 纯色页：两种面色卡完整显示（文字多，不裁切） */
+.page-solid .pd-colorcharts { align-items: start; }
+.page-solid .pd-colorcharts .pd-card { background: transparent; box-shadow: none; }
+.page-solid .pd-colorcharts .pd-card img { object-fit: contain; height: 460px; background: #fff; }
+.page-solid .pd-colorcharts .pd-card figcaption { text-align: center; }
+@media (max-width: 900px) { .page-solid .pd-colorcharts .pd-card img { height: 380px; } }
+@media (max-width: 620px) { .page-solid .pd-colorcharts .pd-card img { height: 330px; } }
