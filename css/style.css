@@ -657,3 +657,18 @@ img { max-width: 100%; display: block; }
   .page-foldable .fd-duo .pd-card img { height: 320px; }
 }
 .page-foldable .gallery-uniform .g-item img { aspect-ratio: 1 / 1; }
+/* Foldable desktop: shrink images so each fits one screen (keep bottom gallery row) */
+@media (min-width: 901px) {
+  .page-foldable .fd-overview .pd-card img { height: 300px; }
+  .page-foldable .fd-duo .pd-card img { height: 400px; }
+  .page-foldable .fd-matte-grid .pd-card img { height: 300px; }
+  .page-foldable .pd-poster { max-width: 620px; }
+  .page-foldable .fd-scene { max-width: none; }
+  .page-foldable .fd-scene img { max-height: 620px; width: auto; max-width: 100%; margin: 0 auto; }
+}
+.page-foldable .gallery-uniform .g-item .g-caption {
+  position: static; display: block;
+  background: none; color: var(--ink-soft);
+  padding: .55rem .3rem .2rem; border-radius: 0; text-align: center;
+  backdrop-filter: none; font-weight: 500;
+}
