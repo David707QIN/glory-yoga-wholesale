@@ -521,15 +521,15 @@ img { max-width: 100%; display: block; }
 .page-solid .pd-card figcaption { padding: .8rem 1rem; }
 .page-solid .pd-img-thickness { object-position: center 88%; }
 
-.page-solid .color-range-block { grid-template-columns: 1.2fr .9fr; gap: 2rem; align-items: center; }
-.page-solid .color-range-img { max-width: 440px; }
-.page-solid .color-range-img img { height: 340px; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
-.page-solid .color-range-note h2 { font-size: clamp(1.5rem, 2.4vw, 1.95rem); margin-bottom: .8rem; }
-.page-solid .color-range-note p { font-size: .95rem; margin-bottom: .8rem; }
-.page-solid .color-range-note .pd-specs { margin-top: 1rem; }
-.page-solid .color-range-note .pd-spec { padding: .7rem .85rem; }
-.page-solid .color-range-note .pd-spec strong { font-size: .68rem; }
-.page-solid .color-range-note .pd-spec span { font-size: .86rem; }
+.page-solid .color-range-block { grid-template-columns: 1.25fr .75fr; gap: 2.2rem; align-items: center; }
+.page-solid .color-range-img { max-width: 560px; }
+.page-solid .color-range-img img { height: 420px; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
+.page-solid .color-range-note h2 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); margin-bottom: .7rem; }
+.page-solid .color-range-note p { font-size: .92rem; margin-bottom: .7rem; }
+.page-solid .color-range-note .pd-specs { margin-top: .9rem; }
+.page-solid .color-range-note .pd-spec { padding: .6rem .75rem; }
+.page-solid .color-range-note .pd-spec strong { font-size: .66rem; }
+.page-solid .color-range-note .pd-spec span { font-size: .83rem; }
 .page-solid .custom-intro { margin: 2.4rem 0 1.6rem; }
 
 /* Stitched logo-case collage: four-column row bands, no dead space */
