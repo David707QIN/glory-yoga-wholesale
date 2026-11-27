@@ -505,3 +505,111 @@ img { max-width: 100%; display: block; }
   .page-multicolor .color-range-img img { height: 260px; }
   .page-multicolor .custom-grid { grid-auto-rows: 72px; }
 }
+
+/* ===== Multi-color page: calmer image scale + collage gallery ===== */
+.page-solid .page-hero { padding: 2.8rem 0 2rem; }
+.page-solid .page-hero h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+.page-solid .page-hero p { font-size: 1rem; }
+.page-solid .section { padding: 3.4rem 0; }
+.page-solid .product-intro { margin-bottom: 2.2rem; }
+.page-solid .product-intro h2 { font-size: clamp(1.6rem, 2.8vw, 2.15rem); }
+.page-solid .product-intro p { font-size: .98rem; }
+.page-solid .section-head { margin-bottom: 2rem; }
+.page-solid .pd-poster { max-width: 560px; }
+.page-solid .pd-card img { height: 210px; }
+.page-solid .pd-grid .pd-card img { height: 200px; }
+.page-solid .pd-card figcaption { padding: .8rem 1rem; }
+.page-solid .pd-img-thickness { object-position: center 88%; }
+
+.page-solid .color-range-block { grid-template-columns: 1.2fr .9fr; gap: 2rem; align-items: center; }
+.page-solid .color-range-img { max-width: 440px; }
+.page-solid .color-range-img img { height: 340px; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
+.page-solid .color-range-note h2 { font-size: clamp(1.5rem, 2.4vw, 1.95rem); margin-bottom: .8rem; }
+.page-solid .color-range-note p { font-size: .95rem; margin-bottom: .8rem; }
+.page-solid .color-range-note .pd-specs { margin-top: 1rem; }
+.page-solid .color-range-note .pd-spec { padding: .7rem .85rem; }
+.page-solid .color-range-note .pd-spec strong { font-size: .68rem; }
+.page-solid .color-range-note .pd-spec span { font-size: .86rem; }
+.page-solid .custom-intro { margin: 2.4rem 0 1.6rem; }
+
+/* Stitched logo-case collage: four-column row bands, no dead space */
+.page-solid .custom-grid { grid-auto-flow: row dense; grid-auto-rows: 82px; gap: .75rem; }
+.page-solid .custom-grid .pd-card { grid-row: span 2; display: flex; flex-direction: column; }
+.page-solid .custom-grid .pd-card:nth-child(3),
+.page-solid .custom-grid .pd-card:nth-child(4),
+.page-solid .custom-grid .pd-card:nth-child(7),
+.page-solid .custom-grid .pd-card:nth-child(8) { grid-column: span 2; }
+.page-solid .custom-grid .pd-card img { flex: 1 1 0; min-height: 0; height: auto; object-fit: cover; }
+.page-solid .custom-grid .pd-card:nth-child(3) img,
+.page-solid .custom-grid .pd-card:nth-child(4) img { object-position: center 22%; }
+.page-solid .custom-grid .pd-card:nth-child(8) img { object-position: center 25%; }
+/* 最后一排是宽卡，给足高度，避免手绘 logo 被压成窄条 */
+.page-solid .custom-grid .pd-card:nth-child(7),
+.page-solid .custom-grid .pd-card:nth-child(8) { grid-row: span 4; }
+.page-solid .custom-grid .pd-card figcaption { flex: 0 0 auto; padding: .5rem .75rem; font-size: .8rem; line-height: 1.35; }
+
+/* 桌面整体收紧一档：显示尺寸变小，但图片源文件仍是原分辨率，不影响清晰度 */
+@media (min-width: 901px) {
+  .page-solid .page-hero { padding: 2.2rem 0 1.6rem; }
+  .page-solid .page-hero h1 { font-size: clamp(2rem, 3.5vw, 2.8rem); }
+  .page-solid .page-hero p { font-size: .95rem; }
+  .page-solid .section { padding: 2.8rem 0; }
+  .page-solid .product-intro { margin-bottom: 1.8rem; }
+  .page-solid .product-intro h2 { font-size: clamp(1.5rem, 2.5vw, 1.95rem); }
+  .page-solid .pd-poster { max-width: 580px; }
+  .page-solid .pd-card img { height: 210px; }
+  .page-solid .pd-grid .pd-card img { height: 200px; }
+  .page-solid .pd-card figcaption { padding: .7rem .9rem; }
+  .page-solid .color-range-img img { height: 340px; }
+  .page-solid .custom-grid { grid-auto-rows: 74px; }
+}
+@media (max-width: 900px) {
+  .page-solid .pd-card img { height: 240px; }
+  /* 桌面右列变窄的规则不能带到手机，否则图片和规格表挤成两列 */
+  .page-solid .color-range-block { grid-template-columns: 1fr; gap: 1.5rem; }
+  .page-solid .color-range-img { max-width: 100%; }
+  .page-solid .color-range-img img { height: 320px; }
+  .page-solid .custom-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 86px; }
+  .page-solid .custom-grid .pd-card:nth-child(n) { grid-column: span 1; grid-row: span 2; }
+}
+@media (max-width: 620px) {
+  /* 手机首屏收紧：标题和段落都小一点，上下留白压短 */
+  .page-solid .page-hero { padding: 1.4rem 0 1rem; }
+  .page-solid .page-hero .eyebrow { margin-bottom: .35rem; font-size: .7rem; }
+  .page-solid .page-hero h1 { font-size: 1.75rem; line-height: 1.25; margin-bottom: .6rem; }
+  .page-solid .page-hero p { font-size: .9rem; line-height: 1.55; }
+  .page-solid .section { padding: 2.4rem 0; }
+  .page-solid .product-intro { margin-bottom: 1.6rem; }
+  .page-solid .product-intro h2 { font-size: 1.45rem; }
+  .page-solid .product-intro p { font-size: .9rem; }
+  /* 规格表手机端改 2 列，别一格占满整行把页面拉长 */
+  .page-solid .pd-specs { grid-template-columns: repeat(2, 1fr); }
+  .page-solid .pd-spec { padding: .6rem .7rem; }
+  .page-solid .pd-spec strong { font-size: .65rem; margin-bottom: .1rem; }
+  .page-solid .pd-spec span { font-size: .82rem; line-height: 1.35; }
+  .page-solid .pd-card img { height: 190px; }
+  .page-solid .pd-poster { max-width: 100%; }
+  .page-solid .color-range-img img { height: 260px; }
+  .page-solid .custom-grid { grid-auto-rows: 72px; }
+}
+
+
+/* ===== Solid page: 6-image gallery (first row 1,2,3wide; second row 4,5,6wide) ===== */
+.page-solid .custom-grid { grid-auto-rows: 74px; }
+.page-solid .custom-grid .pd-card:nth-child(n) { grid-column: span 1; grid-row: span 2; }
+.page-solid .custom-grid .pd-card:nth-child(3),
+.page-solid .custom-grid .pd-card:nth-child(6) { grid-column: span 2; }
+.page-solid .custom-grid .pd-card img { flex: 1 1 0; min-height: 0; height: auto; object-fit: cover; }
+.page-solid .custom-grid .pd-card figcaption { flex: 0 0 auto; padding: .5rem .75rem; font-size: .8rem; line-height: 1.35; }
+@media (max-width: 900px) {
+  .page-solid .custom-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 86px; }
+  .page-solid .custom-grid .pd-card:nth-child(n) { grid-column: span 1; grid-row: span 2; }
+}
+@media (max-width: 620px) {
+  .page-solid .custom-grid { grid-auto-rows: 72px; }
+}
+
+/* 图案十色卡：整张显示，不裁掉上下两排 */
+.page-solid .pd-pattern .pd-card img { object-fit: contain; height: 260px; }
+@media (max-width: 900px) { .page-solid .pd-pattern .pd-card img { height: 240px; } }
+@media (max-width: 620px) { .page-solid .pd-pattern .pd-card img { height: 210px; } }
