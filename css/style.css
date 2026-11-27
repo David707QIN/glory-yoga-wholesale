@@ -180,20 +180,28 @@ img { max-width: 100%; display: block; }
 .contact-info li { font-size: 0.95rem; }
 .contact-info a { color: var(--brand); font-weight: 600; }
 .contact-info strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #b8ac9c; margin-bottom: 0.2rem; }
-/* 桌面：浅色精致版——白卡表单 + 右侧裸排，竖线分隔 + 大标题 + 细线节奏 */
+/* 桌面 v2：横排信息带在上 + 居中表单在下（与 v1 左右两栏完全不同的风格） */
 @media (min-width: 901px) {
-  .contact-wrap { grid-template-columns: 1.4fr 0.85fr; align-items: center; gap: 2.5rem; }
+  .contact-wrap { grid-template-columns: 1fr; justify-items: center; gap: 2.5rem; }
   .contact-info {
+    order: 1; width: 100%; max-width: 780px;
     background: transparent; color: var(--ink);
-    border-radius: 0; border-left: 1px solid rgba(43,39,35,.18);
-    padding: 0 0 0 3rem;
+    border-radius: 0; padding: 0;
   }
-  .contact-info h3 { color: var(--ink); font-size: 2rem; margin-bottom: 2rem; }
-  .contact-info ul { gap: 1.5rem; }
-  .contact-info li { padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
-  .contact-info li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .contact-info h3 { color: var(--ink); font-size: 1.6rem; text-align: center; margin-bottom: 1.5rem; }
+  .contact-info ul {
+    flex-direction: row; gap: 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding: 1.6rem 0;
+  }
+  .contact-info li {
+    flex: 1; text-align: center; padding: 0 1rem;
+    border-right: 1px solid var(--line);
+  }
+  .contact-info li:last-child { border-right: 0; }
   .contact-info strong { color: var(--brand-dark); }
   .contact-info a { font-size: 1.05rem; }
+  .contact-form { order: 2; width: 100%; max-width: 780px; }
 }
 
 /* ===== Page hero (sub-pages) ===== */
