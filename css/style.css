@@ -180,9 +180,22 @@ img { max-width: 100%; display: block; }
 .contact-info li { font-size: 0.95rem; }
 .contact-info a { color: var(--brand); font-weight: 600; }
 .contact-info strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #b8ac9c; margin-bottom: 0.2rem; }
-/* 桌面：右卡保持自然紧凑高度，垂直居中于左侧表单旁 */
+/* 桌面：深色整块包裹，白卡表单浮于其上，右侧裸排 + 细线分隔 */
 @media (min-width: 901px) {
-  .contact-wrap { align-items: center; }
+  .contact-wrap {
+    grid-template-columns: 1.35fr 0.85fr;
+    align-items: center;
+    gap: 3.5rem;
+    background: var(--ink);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+  }
+  .contact-form { box-shadow: none; }
+  .contact-info { background: transparent; padding: 0; }
+  .contact-info h3 { font-size: 1.5rem; }
+  .contact-info li { padding: .9rem 0; border-bottom: 1px solid rgba(245,239,230,.15); }
+  .contact-info li:last-child { border-bottom: 0; }
+  .contact-info a { font-size: 1.02rem; }
 }
 
 /* ===== Page hero (sub-pages) ===== */
